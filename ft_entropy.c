@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calcular_desorden.c                                :+:      :+:    :+:   */
+/*   ft_entropy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:21:16 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/23 15:14:49 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/24 10:38:41 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "includes/push_swap.h"
 
-float	calcular_desorden(t_list *a)
+double	ft_entropy(t_list *a)
 {
-	float	mistakes;
-	float	total_pairs;
+	double	mistakes;
+	double	total_pairs;
 	t_list	*temp;
 
 	temp = malloc(sizeof(t_list));
