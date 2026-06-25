@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_simple.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 16:34:49 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 10:25:09 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/25 10:30:19 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
