@@ -6,7 +6,6 @@ SOURCES =	srcs/ft_entropy.c		\
          	srcs/ft_moves.c			\
 			srcs/ft_algo_simple.c	\
 		 	srcs/lst_function.c		\
-			main.c				\
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -22,13 +21,12 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) $(LIBS)
 	@echo "Compiling...."
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
-
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) $(LIBS)
 
 $(LIBS):
-	cd libft && make && make clean && mv libft.a ../ && cd ../ && cd ft_printf && make && make clean && mv ft_printf.a ../ && cd ..
+	cd srcs/libft && make && make clean && mv libft.a ../../ && cd ../ && cd ft_printf && make && make clean && mv ft_printf.a ../../ && cd ../../
 	
 clean: 
 	@echo "Cleaning...."
