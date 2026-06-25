@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/28 09:17:08 by alcristo          #+#    #+#              #
-#    Updated: 2026/06/24 09:16:30 by alcristo         ###   ########.fr        #
+#    Updated: 2026/06/25 10:28:59 by pnarvaez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= libftprintf.a
+NAME= ft_printf.a
 
 SOURCES= 	srcs/ft_printf.c							\
 			srcs/ft_printf_putchar.c					\
