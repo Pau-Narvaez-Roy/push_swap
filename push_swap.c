@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 15:39:58 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 09:20:15 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/06/25 10:42:18 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	check_error(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]) && argv[i][0] != '-')
-				return (write(2, "Error\n", 6), exit(EXIT_FAILURE);
+				return (write(2, "Error\n", 6), exit(EXIT_FAILURE));
 			j++;
 		}
 		j = i;
