@@ -6,13 +6,12 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:42:36 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/25 11:00:02 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/25 11:34:46 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/includes/push_swap.h"
 #include "srcs/ft_printf/srcs/includes/ft_printf.h"
-#include <stdio.h>
 
 void	print_lst(t_list *lst)
 {
@@ -21,16 +20,29 @@ void	print_lst(t_list *lst)
 	i = 0;
 	while (lst)
 	{
-		printf("Lst%i: %i\n", i++, lst->num);
+		ft_printf("Lst%i: %i\n", i++, lst->num);
 		lst = lst->next;
+	}
+}
+
+void	print_pos(unsigned int *pos)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (pos[i])
+	{
+		ft_printf("Pos%i: %i\n", i, pos[i]);
+		i++;
 	}
 }
 
 int	main(int argc, char **argv)
 {
-	int		i;
-	t_list	*lst;
-	t_list	*temp;
+	int				i;
+	t_list			*lst;
+	t_list			*temp;
+	unsigned int	*pos;
 
 	i = 1;
 	lst = NULL;
@@ -41,8 +53,7 @@ int	main(int argc, char **argv)
 	}
 	ft_printf("Num: %f\n", ft_entropy(lst));
 	print_lst(lst);
-	ft_rrotate(&lst);
-	print_lst(lst);
-	free(temp);
-	return (0);
+	pos = ft_standar(lst);
+	print_pos(pos);
+	return (free(temp), free(pos), 0);
 }
