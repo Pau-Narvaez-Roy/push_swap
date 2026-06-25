@@ -6,11 +6,12 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:42:36 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/25 10:37:47 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/25 11:00:02 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/includes/push_swap.h"
+#include "srcs/ft_printf/srcs/includes/ft_printf.h"
 #include <stdio.h>
 
 void	print_lst(t_list *lst)
@@ -38,7 +39,7 @@ int	main(int argc, char **argv)
 		temp = ft_lstnew(argv[i++][0]);
 		ft_lstadd_back(&lst, temp);
 	}
-	printf("Num: %f\n", ft_entropy(lst));
+	ft_printf("Num: %f\n", ft_entropy(lst));
 	print_lst(lst);
 	ft_rrotate(&lst);
 	print_lst(lst);
