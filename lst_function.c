@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:52:03 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/23 17:13:29 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/24 12:03:35 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "includes/push_swap.h"
 
 int	ft_lstsize(t_list *lst)
 {
