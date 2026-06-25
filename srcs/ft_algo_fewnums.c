@@ -6,7 +6,7 @@
 /*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 12:23:37 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 09:49:29 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/06/25 10:10:53 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,6 @@ void	ft_algo_fewnums(char **argv)
 		}
 		free(a);
 	}
+	if (ft_lstsize(a) == 4 || ft_lstsize(a) == 5)
+		ft_algo_bubble(a, ft_lstsize(a));
 }

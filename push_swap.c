@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 15:39:58 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 09:55:33 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/25 09:20:15 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	check_error(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]) && argv[i][0] != '-')
-				return (write(2, "Error\n", 6), exit(EXIT_FAILURE));
+				return (write(2, "Error\n", 6), exit(EXIT_FAILURE);
 			j++;
 		}
 		j = i;
@@ -79,6 +79,8 @@ int	main(int argc, char **argv)
 	if (check_error(argv) < 0)
 		exit(EXIT_FAILURE);
 	entropy = ft_entropy(argv);
+	if (entropy == 1)
+		return (EXIT_SUCCESS);
 	if (argc - 1 < 6)
 		return (ft_algo_fewnums(argc), EXIT_SUCCESS);
 	strat = select_strat(argv);
