@@ -1,16 +1,17 @@
-# todo: hacer que haga make en la carpeta de la libftprintf y que la mueva a la raiz. Poner su nombre en .PHONY
+# todo: hacer que haga make en la carpeta de la libft y ft_printf y que la mueva a la raiz. Poner su nombre en .PHONY
 
 NAME = push_swap
 
 SOURCES =	srcs/ft_entropy.c		\
          	srcs/ft_moves.c			\
-			srcs/ft_check_error.c	\
 			srcs/ft_algo_simple.c	\
 		 	srcs/lst_function.c		\
+			main.c				\
 
 OBJECTS = $(SOURCES:.c=.o)
 
-LIBFT = libft.a
+LIBS = 	libft.a		\
+		ft_printf.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -25,22 +26,17 @@ $(NAME): $(OBJECTS)
 	@echo "Compiling...."
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
 
-$(OBJECTS): $(SOURCES) libft
-	$(CC) $(CFLAGS) -c -o $(OBJECTS) $(SOURCES) srcs/libft.a
 
-libft:
-	cd libft
-	make && make clean
-	mv $(LIBFT) ..
-	cd ..
-
+$(LIBS):
+	cd libft && make && make clean && mv libft.a ../ && cd ../ && cd ft_printf && make && make clean && mv ft_printf.a ../ && cd ..
+	
 clean: 
 	@echo "Cleaning...."
-	@$(RM) $(OBJECTS) $(LIBFT_OBJECTS)
+	@$(RM) $(OBJECTS) $(LIBS)
 
 fclean: clean
-	@$(RM) $(NAME) $(LIBFT)
+	@$(RM) $(NAME)
 
 re:	fclean all
 
-.PHONY: all clean fclean re libft
+.PHONY: all clean fclean re
