@@ -2,10 +2,12 @@
 
 NAME = push_swap
 
-SOURCES =	srcs/ft_entropy.c		\
-         	srcs/ft_moves.c			\
-			srcs/ft_algo_simple.c	\
-		 	srcs/lst_function.c		\
+SOURCES =	srcs/ft_entropy.c			\
+         	srcs/ft_moves.c				\
+			srcs/ft_algo_simple.c		\
+		 	srcs/lst_function.c			\
+			srcs/ft_standardization.c	\
+			main.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
