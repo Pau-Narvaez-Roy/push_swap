@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:20:52 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/25 08:59:50 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/28 10:54:34 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,27 @@
 /*
 Process for movements sa & sb:
 - We create a temporal node & a temporal number.
-- Let the temporal number be the head one & the temporal list be the next one.
-- The head number would be the temporal list's number &
+- Let the temporal number be the head one & the temporal stack be the next one.
+- The head number would be the temporal stack's number &
 the next number would be the temporal number.
 Therefore, the values have been swapped.
 */
-void	ft_swap(t_list *lst)
+void	ft_swap(t_list **lst, char c)
 {
 	t_list	*lst_temp;
 	int		num_temp;
 
-	if (lst && lst->next)
+	if (*lst && (*lst)->next)
 	{
-		num_temp = lst->num;
-		lst_temp = lst->next;
-		lst->num = lst_temp->num;
+		num_temp = (*lst)->num;
+		lst_temp = (*lst)->next;
+		(*lst)->num = lst_temp->num;
 		lst_temp->num = num_temp;
 	}
+	if (c == 'a')
+		write(1, "sa\n", 3);
+	if (c == 'b')
+		write(1, "sb\n", 3);
 }
 
 /*
@@ -41,26 +45,31 @@ Process for movements pa & pb:
 - The head node gets appended to the destination head.
 Thus, the source head node has been moved to the destination head.
 */
-void	ft_push(t_list *to, t_list *from)
+void	ft_push(t_list **to, t_list **from, char c)
 {
 	t_list	*head;
 
-	if (from)
+	if (*from)
 	{
-		head = from;
-		from = from->next;
-		ft_lstadd_front(&to, head);
+		head = *from;
+		*from = (*from)->next;
+		head->next = NULL;
+		ft_lstadd_front(to, head);
 	}
+	if (c == 'a')
+		write(1, "pa\n", 3);
+	if (c == 'b')
+		write(1, "pb\n", 3);
 }
 
 /*
 Process for movements ra & rb:
 - We declare the first node & set it to be the head node.
-- The list advances so the new head node is the next one.
+- The stack advances so the new head node is the next one.
 - The first node gets detached & gets appended to the tail.
 Overall, all the elements have moved up.
 */
-void	ft_rotate(t_list **lst)
+void	ft_rotate(t_list **lst, char c)
 {
 	t_list	*first;
 
@@ -71,16 +80,20 @@ void	ft_rotate(t_list **lst)
 		first->next = NULL;
 		ft_lstadd_back(lst, first);
 	}
+	if (c == 'a')
+		write(1, "ra\n", 3);
+	if (c == 'b')
+		write(1, "rb\n", 3);
 }
 
 /*
 Process for rra & rrb:
 - We search for the second-to-last node & set the next one as the last one.
 - We detach the last node via setting the second-to-last node's next as null.
-- We append the last node to the list's head.
+- We append the last node to the stack's head.
 Overall, the nodes have moved one position down.
 */
-void	ft_rrotate(t_list **lst)
+void	ft_rrotate(t_list **lst, char c)
 {
 	t_list	*temp;
 	t_list	*last;
@@ -94,26 +107,33 @@ void	ft_rrotate(t_list **lst)
 		temp->next = NULL;
 		ft_lstadd_front(lst, last);
 	}
+	if (c == 'a')
+		write(1, "rra\n", 4);
+	if (c == 'b')
+		write(1, "rrb\n", 4);
 }
 
 /*
 This function can execute either ss, rr or rrr.
 */
-void	ft_multiple(t_list *a, t_list *b, int mov)
+void	ft_multiple(t_list **a, t_list **b, int mov)
 {
 	if (mov == 1)
 	{
-		ft_swap(a);
-		ft_swap(b);
+		ft_swap(a, 0);
+		ft_swap(b, 0);
+		write(1, "ss\n", 3);
 	}
 	else if (mov == 2)
 	{
-		ft_rotate(&a);
-		ft_rotate(&b);
+		ft_rotate(a, 0);
+		ft_rotate(b, 0);
+		write(1, "rr\n", 3);
 	}
 	else if (mov == 3)
 	{
-		ft_rrotate(&a);
-		ft_rrotate(&b);
+		ft_rrotate(a, 0);
+		ft_rrotate(b, 0);
+		write(1, "rrr\n", 4);
 	}
 }
