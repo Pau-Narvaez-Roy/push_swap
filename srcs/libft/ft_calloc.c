@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 11:07:56 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:07:49 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:25:23 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

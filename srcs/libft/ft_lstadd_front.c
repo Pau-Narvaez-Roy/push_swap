@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:00:36 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:08:30 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:25:48 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 10:20:44 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:10:10 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:47 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strnstr(const char *big, const char *small, size_t len)
 {

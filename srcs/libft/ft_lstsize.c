@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:07:32 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:09:13 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:04 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

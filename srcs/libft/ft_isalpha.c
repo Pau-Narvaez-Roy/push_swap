@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 11:00:51 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:07:55 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:25:34 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 int	ft_isalpha(int alpha)
 {

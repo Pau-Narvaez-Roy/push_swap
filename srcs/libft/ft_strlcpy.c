@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:41:22 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:10:00 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:39 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {

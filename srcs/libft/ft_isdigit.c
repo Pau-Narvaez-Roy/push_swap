@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 11:24:16 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:08:02 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:25:40 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 int	ft_isdigit(int dig)
 {

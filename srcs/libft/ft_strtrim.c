@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 14:31:58 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:10:15 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:52 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strtrim(const char *s1, const char *set)
 {

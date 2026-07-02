@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 15:10:27 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:09:58 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:37 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {

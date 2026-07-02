@@ -6,11 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 15:43:59 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:10:24 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:26:57 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 int	ft_tolower(int c)
 {
