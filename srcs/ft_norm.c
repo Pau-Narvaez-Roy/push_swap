@@ -6,11 +6,12 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 11:12:42 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/26 14:20:18 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:09:52 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+#include "includes/libft.h"
 
 unsigned int	*ft_standar(t_list *stack)
 {
