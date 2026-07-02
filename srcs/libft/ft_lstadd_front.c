@@ -6,12 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:00:36 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 12:08:30 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:19:05 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/push_swap.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

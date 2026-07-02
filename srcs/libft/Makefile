@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/18 10:47:21 by alcristo          #+#    #+#              #
-#    Updated: 2026/05/27 13:20:10 by alcristo         ###   ########.fr        #
+#    Updated: 2026/07/02 12:20:26 by pnarvaez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,6 @@ SOURCES = 	ft_isalpha.c		\
 			ft_lstadd_back.c	\
 			ft_lstdelone.c		\
 			ft_lstclear.c		\
-			ft_lstiter.c		\
-			ft_lstmap.c			\
 
 OBJECTS = $(SOURCES:.c=.o)
 

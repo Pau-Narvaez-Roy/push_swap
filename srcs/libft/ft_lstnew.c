@@ -6,12 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 14:39:42 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 12:08:43 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:19:18 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/push_swap.h"
 
 /*
 IMPORTANT
