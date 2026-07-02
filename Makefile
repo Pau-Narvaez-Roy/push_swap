@@ -2,17 +2,18 @@
 
 NAME = push_swap
 
-			#srcs/ft_create_stack.c	\
-			srcs/ft_algo_select.c	\
-			srcs/ft_algo_binary.c	\
-			srcs/ft_algo_bubble.c	\
-			srcs/ft_algo_bucket.c	\
-			srcs/ft_algo_fewnums.c	\#
+#srcs/ft_create_stack.c	\
+srcs/ft_algo_select.c	\
+srcs/ft_algo_binary.c	\
+srcs/ft_algo_bubble.c	\
+srcs/ft_algo_bucket.c	\
+srcs/ft_algo_fewnums.c	\#
 
 SOURCES =	srcs/ft_entropy.c		\
 			srcs/ft_moves.c			\
 			srcs/ft_norm.c			\
 			srcs/ft_bench.c			\
+			srcs/lst_function.c		\
 			main.c
 
 OBJECTS = $(SOURCES:.c=.o)
