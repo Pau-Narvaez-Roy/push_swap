@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_algo_heap.c                                     :+:      :+:    :+:   */
+/*   ft_algo_binary.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 13:56:11 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/29 16:27:32 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:26:58 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Primer pensamiento: mover los menores hacia abajo (rotate)
 Poner primero los mas grandes.
 Se esta complicando mucho. Tendre que replantearlo.
 */
-static void	last_3(t_list **a, t_list **b)
+static void	last_3(t_stack **a, t_stack **b)
 {
 	int	min;
 	int	pos;
@@ -57,7 +57,7 @@ static void	last_3(t_list **a, t_list **b)
 		ft_push(a, b, 'a');
 }
 
-static int	tree_swap(t_list **a, t_list **b, int j)
+static int	tree_swap(t_stack **a, t_stack **b, int j)
 {
 	int	k;
 
@@ -86,9 +86,9 @@ static int	tree_swap(t_list **a, t_list **b, int j)
 	return (0);
 }
 
-static int	tree_sort(t_list **a, t_list **b, int parent)
+static int	tree_sort(t_stack **a, t_stack **b, int parent)
 {
-	t_list	*temp;
+	t_stack	*temp;
 	int		j;
 
 	j = 0;
@@ -103,7 +103,7 @@ static int	tree_sort(t_list **a, t_list **b, int parent)
 	return (0);
 }
 
-static void	make_tree(t_list **a, t_list **b)
+static void	make_tree(t_stack **a, t_stack **b)
 {
 	int	i;
 	int	parents;
@@ -133,7 +133,7 @@ static void	make_tree(t_list **a, t_list **b)
 		make_tree(a, b);
 }
 
-void	ft_algo_binary(t_list **a, t_list **b)
+void	ft_algo_binary(t_stack **a, t_stack **b)
 {
 	int	n;
 	int	nxt;

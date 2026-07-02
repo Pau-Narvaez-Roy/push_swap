@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_fewnums.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 12:23:37 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/29 15:49:33 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/02 12:27:20 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 #include <stdio.h>
 
-static void	ft_algo_2(t_list **a)
+static void	ft_algo_2(t_stack **a)
 {
 	if ((*a)->num > (*a)->next->num)
 		ft_swap(a, 'a');
 }
 
-static void	ft_algo_3(t_list **a)
+static void	ft_algo_3(t_stack **a)
 {
 	int	max;
 	int	pos;
@@ -43,7 +43,7 @@ static void	ft_algo_3(t_list **a)
 	ft_algo_2(a);
 }
 
-void	ft_algo_fewnums(t_list **a, t_list **b)
+void	ft_algo_fewnums(t_stack **a, t_stack **b)
 {
 	if (ft_lstsize(*a) == 2)
 		ft_algo_2(a);

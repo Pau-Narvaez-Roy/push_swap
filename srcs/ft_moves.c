@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:20:52 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/07/02 12:10:01 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:28:01 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Process for movements sa & sb:
 the next number would be the temporal number.
 Therefore, the values have been swapped.
 */
-void	ft_swap(t_list **lst, char c, t_moves *moves)
+void	ft_swap(t_stack **lst, char c, t_moves *moves)
 {
-	t_list	*lst_temp;
+	t_stack	*lst_temp;
 	int		num_temp;
 
 	if (*lst && (*lst)->next)
@@ -53,9 +53,9 @@ Process for movements pa & pb:
 - The head node gets appended to the destination head.
 Thus, the source head node has been moved to the destination head.
 */
-void	ft_push(t_list **to, t_list **from, char c, t_moves *moves)
+void	ft_push(t_stack **to, t_stack **from, char c, t_moves *moves)
 {
-	t_list	*head;
+	t_stack	*head;
 
 	if (*from)
 	{
@@ -84,9 +84,9 @@ Process for movements ra & rb:
 - The first node gets detached & gets appended to the tail.
 Overall, all the elements have moved up.
 */
-void	ft_rotate(t_list **lst, char c, t_moves *moves)
+void	ft_rotate(t_stack **lst, char c, t_moves *moves)
 {
-	t_list	*first;
+	t_stack	*first;
 
 	if (*lst && (*lst)->next)
 	{
@@ -115,10 +115,10 @@ Process for rra & rrb:
 - We append the last node to the stack's head.
 Overall, the nodes have moved one position down.
 */
-void	ft_rrotate(t_list **lst, char c, t_moves *moves)
+void	ft_rrotate(t_stack **lst, char c, t_moves *moves)
 {
-	t_list	*temp;
-	t_list	*last;
+	t_stack	*temp;
+	t_stack	*last;
 
 	if (*lst && (*lst)->next)
 	{
@@ -145,7 +145,7 @@ void	ft_rrotate(t_list **lst, char c, t_moves *moves)
 /*
 This function can execute either ss, rr or rrr.
 */
-void	ft_multiple(t_list **a, t_list **b, int mov, t_moves *moves)
+void	ft_multiple(t_stack **a, t_stack **b, int mov, t_moves *moves)
 {
 	if (mov == 1)
 	{

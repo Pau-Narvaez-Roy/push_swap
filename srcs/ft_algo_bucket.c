@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_bucket.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 10:15:24 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/28 10:49:34 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:27:14 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ This medium algorithm is the bucket sort:
 - After being sorted backwards, i goes up to 1. Repeat.
 - Finally, when 3 remain in a, they get sorted and b is totally pushed to a.
 */
-static void	ft_algo_bucket_bubble(t_list **b, int lstsize)
+static void	ft_algo_bucket_bubble(t_stack **b, int lstsize)
 {
 	double	entropy;
 	int		i;
@@ -43,7 +43,7 @@ static void	ft_algo_bucket_bubble(t_list **b, int lstsize)
 	}
 }
 
-static void	empty_a(t_list **a, t_list **b)
+static void	empty_a(t_stack **a, t_stack **b)
 {
 	int		membs;
 	int		bucket;
@@ -72,7 +72,7 @@ static void	empty_a(t_list **a, t_list **b)
 		ft_algo_bucket_bubble(b, membs);
 }
 
-void	ft_algo_bucket(t_list **a, t_list **b)
+void	ft_algo_bucket(t_stack **a, t_stack **b)
 {
 	empty_a(a, b);
 	while (*b)

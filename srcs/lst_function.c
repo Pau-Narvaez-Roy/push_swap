@@ -6,13 +6,13 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:52:03 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/24 12:03:35 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:28:13 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_stack *lst)
 {
 	int		size;
 
@@ -25,11 +25,11 @@ int	ft_lstsize(t_list *lst)
 	return (size);
 }
 
-t_list	*ft_lstnew(int content)
+t_stack	*ft_lstnew(int content)
 {
-	t_list	*lst;
+	t_stack	*lst;
 
-	lst = malloc(sizeof(t_list));
+	lst = malloc(sizeof(t_stack));
 	if (!lst)
 		return (NULL);
 	lst->num = content;
@@ -37,7 +37,7 @@ t_list	*ft_lstnew(int content)
 	return (lst);
 }
 
-t_list	*ft_lstlast(t_list *lst)
+t_stack	*ft_lstlast(t_stack *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -46,9 +46,9 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
-	t_list	*list;
+	t_stack	*list;
 
 	if (!lst || !new)
 		return ;
@@ -59,7 +59,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		list->next = new;
 }
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_stack **lst, t_stack *new)
 {
 	if (!lst || !new)
 		return ;

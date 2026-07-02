@@ -6,17 +6,17 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 16:41:48 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 11:49:42 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:27:44 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 #include "includes/libft.h"
 
-static void	normalize(t_list *a, unsigned int *pos)
+static void	normalize(t_stack *a, unsigned int *pos)
 {
 	int		i;
-	t_list	*lst;
+	t_stack	*lst;
 
 	lst = a;
 	i = 0;
@@ -28,10 +28,10 @@ static void	normalize(t_list *a, unsigned int *pos)
 	}
 }
 
-t_list	*ft_create_stack(char **argv)
+t_stack	*ft_create_stack(char **argv)
 {
-	t_list			*a;
-	t_list			*lst;
+	t_stack			*a;
+	t_stack			*lst;
 	int				i;
 	unsigned int	*norm;
 

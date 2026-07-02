@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_select.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 16:34:49 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/28 10:47:27 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:27:27 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ This simple algorithm is selection sort.
 - When there are left 3 nodes in a, we sort them and push the rest to a.
 */
 
-void	ft_algo_select(t_list **a, t_list **b)
+void	ft_algo_select(t_stack **a, t_stack **b)
 {
 	double	entropy;
 	int		i;

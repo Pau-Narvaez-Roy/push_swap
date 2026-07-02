@@ -6,14 +6,14 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:42:36 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/07/02 08:49:57 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:28:23 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/includes/push_swap.h"
 #include "srcs/includes/ft_printf.h"
 
-void	print_lst(t_list *lst)
+void	print_lst(t_stack *lst)
 {
 	int	i;
 
@@ -40,18 +40,32 @@ void	print_pos(unsigned int *pos)
 int	main(int argc, char **argv)
 {
 	int				i;
-	t_list			*lst;
-	t_list			*temp;
+	t_stack			*lst;
+	t_stack			*temp;
+	t_moves			*moves;
 	unsigned int	*pos;
 
 	i = 1;
 	lst = NULL;
+	moves = malloc(sizeof(t_moves));
+	moves->sa = 0;
+	moves->sb = 1;
+	moves->ss = 2;
+	moves->pa = 3;
+	moves->pb = 4;
+	moves->ra = 5;
+	moves->rb = 6;
+	moves->rr = 7;
+	moves->rra = 8;
+	moves->rrb = 9;
+	moves->rrr = 10;
+	moves->sum = 11;
 	while (i < argc)
 	{
 		temp = ft_lstnew(argv[i++][0]);
 		ft_lstadd_back(&lst, temp);
 	}
-	ft_printf("Num: %f\n", ft_entropy(lst));
+	ft_bench(lst, moves);
 	print_lst(lst);
 	pos = ft_standar(lst);
 	print_pos(pos);

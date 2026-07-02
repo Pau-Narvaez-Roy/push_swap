@@ -6,20 +6,20 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 11:12:42 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/07/02 12:09:52 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:28:08 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 #include "includes/libft.h"
 
-unsigned int	*ft_standar(t_list *stack)
+unsigned int	*ft_standar(t_stack *stack)
 {
 	unsigned int	*pos;
 	unsigned int	i;
 	unsigned int	value;
-	t_list			*temp;
-	t_list			*head;
+	t_stack			*temp;
+	t_stack			*head;
 
 	pos = (unsigned int *) malloc(sizeof(int) * ft_lstsize(stack));
 	if (!pos)
