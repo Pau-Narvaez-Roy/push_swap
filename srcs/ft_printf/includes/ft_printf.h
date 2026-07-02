@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 14:09:18 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/23 10:48:53 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:21:02 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_opts
 	int		precision;
 	int		fd;
 }			t_opts;
+
 char	*ft_strchr(const char *s, int c);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
