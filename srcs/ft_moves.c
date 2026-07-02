@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:20:52 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/28 10:54:34 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 11:38:07 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Process for movements sa & sb:
 the next number would be the temporal number.
 Therefore, the values have been swapped.
 */
-void	ft_swap(t_list **lst, char c)
+void	ft_swap(t_list **lst, char c, t_moves *moves)
 {
 	t_list	*lst_temp;
 	int		num_temp;
@@ -33,9 +33,16 @@ void	ft_swap(t_list **lst, char c)
 		lst_temp->num = num_temp;
 	}
 	if (c == 'a')
+	{
 		write(1, "sa\n", 3);
+		moves->sa += 1;
+	}
 	if (c == 'b')
+	{
 		write(1, "sb\n", 3);
+		moves->sb += 1;
+	}
+	moves->sum += 1;
 }
 
 /*
@@ -45,7 +52,7 @@ Process for movements pa & pb:
 - The head node gets appended to the destination head.
 Thus, the source head node has been moved to the destination head.
 */
-void	ft_push(t_list **to, t_list **from, char c)
+void	ft_push(t_list **to, t_list **from, char c, t_moves *moves)
 {
 	t_list	*head;
 
@@ -57,9 +64,16 @@ void	ft_push(t_list **to, t_list **from, char c)
 		ft_lstadd_front(to, head);
 	}
 	if (c == 'a')
+	{
 		write(1, "pa\n", 3);
+		moves->pa += 1;
+	}
 	if (c == 'b')
+	{
 		write(1, "pb\n", 3);
+		moves->pb += 1;
+	}
+	moves->sum += 1;
 }
 
 /*
@@ -69,7 +83,7 @@ Process for movements ra & rb:
 - The first node gets detached & gets appended to the tail.
 Overall, all the elements have moved up.
 */
-void	ft_rotate(t_list **lst, char c)
+void	ft_rotate(t_list **lst, char c, t_moves *moves)
 {
 	t_list	*first;
 
@@ -81,9 +95,16 @@ void	ft_rotate(t_list **lst, char c)
 		ft_lstadd_back(lst, first);
 	}
 	if (c == 'a')
+	{
 		write(1, "ra\n", 3);
+		moves->ra += 1;
+	}
 	if (c == 'b')
+	{
 		write(1, "rb\n", 3);
+		moves->rb += 1;
+	}
+	moves->sum += 1;
 }
 
 /*
@@ -93,7 +114,7 @@ Process for rra & rrb:
 - We append the last node to the stack's head.
 Overall, the nodes have moved one position down.
 */
-void	ft_rrotate(t_list **lst, char c)
+void	ft_rrotate(t_list **lst, char c, t_moves *moves)
 {
 	t_list	*temp;
 	t_list	*last;
@@ -108,32 +129,42 @@ void	ft_rrotate(t_list **lst, char c)
 		ft_lstadd_front(lst, last);
 	}
 	if (c == 'a')
+	{
 		write(1, "rra\n", 4);
+		moves->rra += 1;
+	}
 	if (c == 'b')
+	{
 		write(1, "rrb\n", 4);
+		moves->rrb += 1;
+	}
+	moves->sum += 1;
 }
 
 /*
 This function can execute either ss, rr or rrr.
 */
-void	ft_multiple(t_list **a, t_list **b, int mov)
+void	ft_multiple(t_list **a, t_list **b, int mov, t_moves *moves)
 {
 	if (mov == 1)
 	{
 		ft_swap(a, 0);
 		ft_swap(b, 0);
 		write(1, "ss\n", 3);
+		moves->ss += 1;
 	}
 	else if (mov == 2)
 	{
 		ft_rotate(a, 0);
 		ft_rotate(b, 0);
 		write(1, "rr\n", 3);
+		moves->rr += 1;
 	}
 	else if (mov == 3)
 	{
 		ft_rrotate(a, 0);
 		ft_rrotate(b, 0);
 		write(1, "rrr\n", 4);
+		moves->rrr += 1;
 	}
 }
