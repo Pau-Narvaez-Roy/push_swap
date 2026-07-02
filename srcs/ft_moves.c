@@ -6,11 +6,12 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:20:52 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/07/02 11:38:07 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:10:01 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+#include "includes/libft.h"
 
 /*
 Process for movements sa & sb:
@@ -148,22 +149,22 @@ void	ft_multiple(t_list **a, t_list **b, int mov, t_moves *moves)
 {
 	if (mov == 1)
 	{
-		ft_swap(a, 0);
-		ft_swap(b, 0);
+		ft_swap(a, 0, moves);
+		ft_swap(b, 0, moves);
 		write(1, "ss\n", 3);
 		moves->ss += 1;
 	}
 	else if (mov == 2)
 	{
-		ft_rotate(a, 0);
-		ft_rotate(b, 0);
+		ft_rotate(a, 0, moves);
+		ft_rotate(b, 0, moves);
 		write(1, "rr\n", 3);
 		moves->rr += 1;
 	}
 	else if (mov == 3)
 	{
-		ft_rrotate(a, 0);
-		ft_rrotate(b, 0);
+		ft_rrotate(a, 0, moves);
+		ft_rrotate(b, 0, moves);
 		write(1, "rrr\n", 4);
 		moves->rrr += 1;
 	}
