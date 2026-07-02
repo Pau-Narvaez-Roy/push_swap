@@ -6,12 +6,12 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:42:36 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/25 11:34:46 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:49:57 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/includes/push_swap.h"
-#include "srcs/ft_printf/srcs/includes/ft_printf.h"
+#include "srcs/includes/ft_printf.h"
 
 void	print_lst(t_list *lst)
 {
