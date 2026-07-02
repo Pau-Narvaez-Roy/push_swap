@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 14:39:42 by alcristo          #+#    #+#             */
-/*   Updated: 2026/07/02 08:26:02 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:04:12 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ IMPORTANT
 ALWAYS save the reference to the first list or else it will be lost
 */
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int num)
 {
 	t_list	*newlst;
 
 	newlst = (t_list *) malloc(sizeof(t_list));
 	if (!newlst)
 		return (NULL);
-	newlst->content = content;
+	newlst->num = num;
 	newlst->next = NULL;
 	return (newlst);
 }
