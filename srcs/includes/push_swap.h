@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:22:19 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/07/02 12:29:04 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/07/02 12:38:02 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_moves
 typedef struct s_stack
 {
 	int				num;
-	struct s_list	*next;
+	struct s_stack	*next;
 }					t_stack;
 
 typedef struct s_chr
