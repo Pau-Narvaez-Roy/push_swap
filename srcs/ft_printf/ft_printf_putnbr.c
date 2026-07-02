@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_puthex.c                                 :+:      :+:    :+:   */
+/*   ft_printf_putnbr.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/29 09:57:31 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/07 11:42:32 by alcristo         ###   ########.fr       */
+/*   Created: 2026/05/30 11:54:39 by alcristo          #+#    #+#             */
+/*   Updated: 2026/07/02 08:24:13 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_printf_puthex(unsigned int nbr, int caps)
+int	ft_printf_putnbr(int nbr)
 {
-	char	*base;
-	char	c;
+	long	nl;
 	int		nc;
+	char	c;
 
 	if (nbr == 0)
 		return (write(1, "0", 1));
-	if (caps == 1)
-		base = "0123456789ABCDEF";
-	else
-		base = "0123456789abcdef";
-	c = 0;
+	nl = (long)nbr;
 	nc = 0;
-	if (nbr > 15)
-		nc += ft_printf_puthex(nbr / 16, caps);
-	c = base[nbr % 16];
+	if (nl < 0)
+	{
+		nc += write(1, "-", 1);
+		nl *= -1;
+	}
+	if (nl > 9)
+		nc += ft_printf_putnbr(nl / 10);
+	c = nl % 10 + '0';
 	nc += write(1, &c, 1);
 	return (nc);
 }

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_putuns.c                                 :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/29 09:44:35 by alcristo          #+#    #+#             */
-/*   Updated: 2026/05/30 17:05:08 by alcristo         ###   ########.fr       */
+/*   Created: 2026/06/22 09:26:12 by alcristo          #+#    #+#             */
+/*   Updated: 2026/07/02 08:23:16 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_printf_putuns(unsigned int n)
+long	ft_power(long base, long exp)
 {
-	char	c;
-	int		nc;
-
-	if (n == 0)
-		return (write(1, "0", 1));
-	nc = 0;
-	if (n > 9)
-		nc += ft_printf_putuns(n / 10);
-	c = n % 10 + '0';
-	nc += ft_printf_putchar(c);
-	return (nc);
+	if (base == 1 || exp == 0)
+		return (1);
+	if (base == 0 || exp < 0)
+		return (0);
+	return (base * ft_power(base, exp - 1));
 }

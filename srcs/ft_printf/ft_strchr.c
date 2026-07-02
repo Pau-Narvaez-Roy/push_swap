@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/18 11:24:16 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/05 10:44:47 by alcristo         ###   ########.fr       */
+/*   Created: 2026/05/20 09:35:07 by alcristo          #+#    #+#             */
+/*   Updated: 2026/07/02 08:24:29 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_isdigit(int dig)
+char	*ft_strchr(const char *s, int c)
 {
-	if (dig > 47 && dig < 58)
-		return (1);
-	return (0);
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

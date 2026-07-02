@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_putnbr.c                                 :+:      :+:    :+:   */
+/*   ft_printf_putuns.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/30 11:54:39 by alcristo          #+#    #+#             */
-/*   Updated: 2026/05/30 16:46:06 by alcristo         ###   ########.fr       */
+/*   Created: 2026/05/29 09:44:35 by alcristo          #+#    #+#             */
+/*   Updated: 2026/07/02 08:24:24 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_printf_putnbr(int nbr)
+int	ft_printf_putuns(unsigned int n)
 {
-	long	nl;
-	int		nc;
 	char	c;
+	int		nc;
 
-	if (nbr == 0)
+	if (n == 0)
 		return (write(1, "0", 1));
-	nl = (long)nbr;
 	nc = 0;
-	if (nl < 0)
-	{
-		nc += write(1, "-", 1);
-		nl *= -1;
-	}
-	if (nl > 9)
-		nc += ft_printf_putnbr(nl / 10);
-	c = nl % 10 + '0';
-	nc += write(1, &c, 1);
+	if (n > 9)
+		nc += ft_printf_putuns(n / 10);
+	c = n % 10 + '0';
+	nc += ft_printf_putchar(c);
 	return (nc);
 }

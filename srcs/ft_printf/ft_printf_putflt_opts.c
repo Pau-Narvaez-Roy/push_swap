@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_putflt_opts.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 12:21:34 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 11:48:37 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:23:58 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
-#include <limits.h>
+#include "../includes/ft_printf.h"
 
 static int	print_nbr(long n, t_opts *opts)
 {

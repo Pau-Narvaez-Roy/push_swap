@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_nbr_padtoleft.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 10:40:14 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/10 13:35:24 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/07/02 08:23:30 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 static int	print_zeros(t_opts *opts, int chrs_n, int plus, int sign)
 {

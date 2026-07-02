@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcristo <alcristo@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/22 09:26:12 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/23 10:49:29 by alcristo         ###   ########.fr       */
+/*   Created: 2026/05/18 11:24:16 by alcristo          #+#    #+#             */
+/*   Updated: 2026/07/02 08:23:10 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-long	ft_power(long base, long exp)
+int	ft_isdigit(int dig)
 {
-	if (base == 1 || exp == 0)
+	if (dig > 47 && dig < 58)
 		return (1);
-	if (base == 0 || exp < 0)
-		return (0);
-	return (base * ft_power(base, exp - 1));
+	return (0);
 }
