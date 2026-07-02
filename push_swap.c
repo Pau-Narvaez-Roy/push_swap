@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 15:39:58 by alcristo          #+#    #+#             */
-/*   Updated: 2026/06/25 10:42:18 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/28 10:41:02 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,66 +24,71 @@ static int	check_error(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]) && argv[i][0] != '-')
-				return (write(2, "Error\n", 6), exit(EXIT_FAILURE));
+				return (write(2, "Error\n", 6), EXIT_FAILURE);
 			j++;
 		}
 		j = i;
 		while (argv[j])
 		{
-			if (argv[j] == argv[i])
-				return (write(2, "Error", 6), exit(EXIT_FAILURE));
+			if (argv[j] == argv[i] || ft_strchr(argv[i], '.'))
+				return (write(2, "Error", 6), EXIT_FAILURE);
 			j++;
 		}
-		if (ft_atoi(argv[i] > INT_MAX) || ft_atoi(argv[i] < INT_MIN))
-			return (write(2, "Error", 6), exit(EXIT_FAILURE));
+		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+			return (write(2, "Error", 6), EXIT_FAILURE);
 		i++;
 	}
 	return (0);
 }
 
-static int	select_algo(char **argv, int strat, double entr)
+/*static int	select_algo(t_list *a, double entr)
 {
 	t_list	*a;
 
-	a = malloc(sizeof(t_list));
-	if (!a)
-		return (write(2, "Error\n", 6), exit(EXIT_FAILURE));
 	if (strat == 0)
 	{
 		if (entr < 0.2)
-			ft_algo_simple(a);
+			ft_algo_select(a);
 		else if (entr < 0.5)
-			ft_algo_medium(a);
+			ft_algo_bucket(a);
 		else
-			ft_algo_complex(a);
+			ft_algo_binary(a);
 	}
 	else if (strat == 1)
-		ft_algo_simple(a);
+		ft_algo_select(a);
 	else if (strat == 2)
-		ft_algo_medium(a);
+		ft_algo_bucket(a);
 	else if (strat == 3)
-		ft_algo_complex(a);
+		ft_algo_binary(a);
 	else
-		return (write(2, "Error\n", 6), exit(EXIT_FAILURE));
-	free(a);
+		return (write(2, "Error\n", 6), EXIT_FAILURE);
 	return (0);
-}
+}*/
 
-int	main(int argc, char **argv)
+/*int	main(int argc, char **argv)
 {
-	int		strat;
+	t_list	*a;
+	t_list	*b;
+//	int		strat;
 	double	entropy;
 
 	if (argc == 1 || argc == 2)
 		return (EXIT_SUCCESS);
-	if (check_error(argv) < 0)
+	if (check_error(argv) != 0)
 		exit(EXIT_FAILURE);
-	entropy = ft_entropy(argv);
+	a = ft_create_stack(argv);
+	if (!a)
+		return (write(2, "Error\n", 6), EXIT_FAILURE);
+	b = NULL;
+	entropy = ft_entropy(a);
 	if (entropy == 1)
 		return (EXIT_SUCCESS);
 	if (argc - 1 < 6)
-		return (ft_algo_fewnums(argc), EXIT_SUCCESS);
-	strat = select_strat(argv);
-	select_algo(argv);
+		return (ft_algo_fewnums(a, b), EXIT_SUCCESS);
+//	strat = select_strat(argv);
+//	select_algo(a, entropy);
+	if (b != NULL)
+		return (free(b), free(a), write(2, "Error\n", 6), EXIT_FAILURE);
+	free(a);
 	return (EXIT_SUCCESS);
-}
+}*/
